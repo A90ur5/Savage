@@ -11,8 +11,9 @@ class Solution:
             word_counter[s[r]] += 1
             max_freq = max(max_freq, word_counter[s[r]])
             while (r - l + 1) - max_freq > k:
-                l += 1
                 word_counter[s[l]] -= 1
+                l += 1
+                
             longest_substring = max(longest_substring, r -l + 1)
                 
         return longest_substring
