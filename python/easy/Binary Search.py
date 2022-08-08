@@ -4,6 +4,11 @@ class Solution:
         l, r = 0, len(nums) - 1
         while l <= r:
             m = ( l + r ) // 2
+            # m = (r - l) // 2 + l
+            # it's a safe way to write in a language that have to deal with datatype
+            # such like C++
+            # because if the nums arrary is extreme long
+            # l + r maybe > 2^31 and than overflow
             if nums[m] < target:
                 l = m + 1
             elif nums[m] > target:
