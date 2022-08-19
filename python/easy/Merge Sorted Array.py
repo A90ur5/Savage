@@ -5,7 +5,8 @@ class Solution:
         for k in range(m+n-1, -1, -1):
             if i < 0:
                 nums1[:j+1] = nums2[:j+1]
-
+                break
+            
             elif j < 0:
                 break
 
